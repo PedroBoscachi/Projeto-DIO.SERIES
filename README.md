@@ -9,3 +9,5 @@ orientada a objetos.
 *Vale ressaltar, tomei a liberdade de adicionar uma funcionalidade de confirmação
 do usuário no momento de excluir uma série e uma funcionalidade de adicionar
 as notas das séries para o usuário preencher.
+
+O PROJETO ESTÁ NA BRANCH MASTER!!!!
