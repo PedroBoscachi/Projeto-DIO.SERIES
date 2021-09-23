@@ -11,18 +11,21 @@ namespace DIO.Series
 
         private string Descricao { get; set; }
 
+        private int Nota { get; set; }
+
         private int Ano { get; set; }   
 
         private bool Excluido { get; set; }
     
 
-        public Serie(int id, Genero genero, string titulo, string descricao, int ano){
+        public Serie(int id, Genero genero, string titulo, string descricao, int ano, int nota){
             this.Id = id;
             this.Genero = genero;
             this.Titulo = titulo;
             this.Descricao = descricao;
             this.Ano = ano;
             this.Excluido = false;
+            this.Nota = nota;
         }
 
         public override string ToString(){
@@ -31,6 +34,7 @@ namespace DIO.Series
             retorno += "Título: " + this.Titulo + Environment.NewLine;
             retorno += "Descrição: " + this.Descricao + Environment.NewLine;
             retorno += "Ano de Início: " + this.Ano + Environment.NewLine;
+            retorno += "Nota: " + this.Nota + Environment.NewLine;
             retorno += "Excluído: " + this.Excluido;
             return retorno;
         }

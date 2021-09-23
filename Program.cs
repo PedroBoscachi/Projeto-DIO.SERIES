@@ -92,11 +92,15 @@ namespace DIO.Series
             Console.Write("Digite a descrição da série: ");
             string entradaDescricao = Console.ReadLine();
 
+            Console.Write("Digite sua nota pessoal para a série (1 a 10): ");
+            int entradaNota = int.Parse(Console.ReadLine());
+
             Serie atualizaSerie = new Serie(id: indiceSerie,
                                             genero: (Genero)entradaGenero,
                                             titulo: entradaTitulo,
                                             ano: entradaAno,
-                                            descricao: entradaDescricao);
+                                            descricao: entradaDescricao,
+                                            nota: entradaNota);
 
             repositorio.Atualiza(indiceSerie, atualizaSerie);
         }
@@ -136,11 +140,15 @@ namespace DIO.Series
             Console.Write("Digite a descrição da série: ");
             string entradaDescricao = Console.ReadLine();
 
+            Console.Write("Digite sua nota pessoal para a série (1 a 10): ");
+            int entradaNota = int.Parse(Console.ReadLine());
+
             Serie novaSerie = new Serie(id: repositorio.Proximoid(),
                                         genero: (Genero)entradaGenero,
                                         titulo: entradaTitulo,
                                         ano: entradaAno,
-                                        descricao: entradaDescricao);
+                                        descricao: entradaDescricao,
+                                        nota: entradaNota);
 
             repositorio.Insere(novaSerie);
         }
